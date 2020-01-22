@@ -1,37 +1,21 @@
-<!DOCTYPE html>
+var $ = function (id) 
+{
+    return document.getElementById(id);
+}
 
+var mainProgram = function () 
+{
+    var stringFirstName = prompt("What is your first name?");
+    if (!isNaN(stringFirstName)) {
+        alert("You did not enter a valid first name, so I will call you Pikachu.  Hello Pikachu!");
+    } else
+    {
+        alert("Hello "+ stringFirstName +"! It's great to meet you!");  
+    }
+}
 
-
-<html>
-
-<head>
-
-    <title>Hello World</title>
-
-    <script src="my.js"></script>
-
-</head>
-
-
-
-<body>
-
-    <h1 align="center">Hello World!</h1>
-    <img style="margin:0px auto;display:block" src="https://media.giphy.com/media/l2YWi2XdCKTDBy0so/giphy.gif"/>
-    <h2 align="center">My name is Heaven Lord...</h
-
-    <br>
-
-   	<label>&nbsp;</label>
-
-	<div style="text-align:center">  
-
-        <input type="button" id="click" value="Click me!!"/>  
-
-    </div>  
-
-    <br>
-
-</body>
-
-</html>
+window.onload = function () 
+{
+    $("click").onclick = mainProgram;
+    $("item_cost").focus(); //puts the cursor on the first DOM text input box
+}
