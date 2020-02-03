@@ -7,7 +7,5 @@
      alert("Your age in years is: " + floatAge);
      alert("Your age in days is: " + floatDays);
      alert("Your age in months is: " + floatMonths);
-     alert("Your age in weeks is: " + intWeeks);
-     alert("Your age in fortnights is: " + intFortnights);
-/*This program will...*/
-   //Calculate floatDays by multiply age x 365.25)
+     alert("Your age weeks is: " + intWeeks);
+     alert("Your age in Fortnights is: " + intFortnights);
