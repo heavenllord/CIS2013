@@ -1,7 +1,7 @@
 var $ = function (id) 
 {
     return document.getElementById(id);
-}
+};
 
 
 /*
@@ -19,7 +19,7 @@ var $ = function (id)
     intLoanTerm = parseInt($("loan_length").value);
     floatTotalCost = parseFloat(floatMonthlyPayment * intLoanTerm);
     $("total_cost").value = floatTotalCost;
-}
+};
  
  window.onload = function () 
 {
@@ -27,4 +27,4 @@ var $ = function (id)
     $("total_cost").value = "";
     $("calc").onclick = calculate;
     $("monthly_payment").focus();
-}
+};
