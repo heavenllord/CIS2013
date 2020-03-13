@@ -33,7 +33,7 @@ var fixPrinter = function() {
             }    
             else
             {
-                stringOutout = (stringMessage4 + "  " + stringMessage5 );
+                stringOutput = (stringMessage4 + "  " + stringMessage5);
             }
         }
         else
