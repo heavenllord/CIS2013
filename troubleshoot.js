@@ -22,60 +22,38 @@ var fixPrinter = function() {
     var boolPrinting = $("not_printing").selected;  //returns a value of true only when the not_printing html id is selected from the dropdown menu
     var boolRedLight = $("yes_redlight").selected;  //returns a value of true only when the yes_redlight html id is selected from the dropdown menu
     var boolRecognised = $("not_recognised").selected;  ////returns a value of true only when the not_recognized html id is selected from the dropdown menu
+
+    //enter your code here and don't forget to send the output to the DOM
+    $("not_printing").value = boolPrinting;
+    $("yes_redlight").value = boolRedLight;
+    $("not_recognised").value = boolRecognised;
     
-    if (boolPrinting === true)
-    {
-        if (boolRedLight === true)
-        {
-            if (boolRecognised === true)
-            {
-                stringOutput = (stringMessage2 + "  " + stringMessage3 + "  " + stringMessage4);
-            }    
-            else
-            {
-                stringOutput = (stringMessage4 + "  " + stringMessage5);
-            }
-        }
-        else
-        {
-            if (boolRecognised === true)
-            {
-                stringOutput = (stringMessage1+"  " + stringMessage2+ "  " + stringMessage3);
-            }
-            else
-            {
-            stringOutput = stringMessage5;
-            }
-        }
+    if (boolPrinting === true && boolRedLight === true && boolRecognised === true){
+     alert(stringMessage2 + "  " + stringMessage3 + "  " + stringMessage4);
+}//if
+    if (boolPrinting === true && boolRedLight === true && boolRecognised === false){
+     alert(stringMessage4 + "  " + stringMessage5 );   
     }
-    else
-    {
-        if (boolRedLight === true)
-         {
-            if (boolRecognised === true)
-            {
-             stringOutput = (stringMessage3 + "  " + stringMessage4);
-            }
-            else
-            {
-            stringOutput = (stringMessage4);
-            }
+    if ( boolPrinting === true && boolRedLight === false && boolRecognised === true){
+        alert(stringMessage1+"  " + stringMessage2+ "  " + stringMessage3);
         }
-        else
-        {
-        if (boolRecognised === true)
-        {
-        stringOutput = (stringMessage6);
-        }
-            else
-            {
-            stringOutput = (stringMessage3); 
-            }
-        }                  
-    }                      
-};                    
+    if (boolPrinting === true && boolRedLight === false && boolRecognised === false){
+        alert(stringMessage5);
+    }
+    if( boolPrinting === false && boolRedLight === true && boolRecognised === true){
+        alert(stringMessage3 + "  " + stringMessage4);
+    }
+    if(boolPrinting === false && boolRedLight === true && boolRecognised === false){
+        alert(stringMessage4)
+    }
+    if(boolPrinting === false && boolRedLight === false && boolRecognised === true){
+        alert(stringMessage3);
+    }
+    if(boolPrinting === false && boolRedLight === false && boolRecognised === false){
+        alert(stringMessage6);
+    } 
+}
 window.onload = function () {
     $("troubleshoot").onclick = fixPrinter;
 };
-
 
